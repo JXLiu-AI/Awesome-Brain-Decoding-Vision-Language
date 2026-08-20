@@ -721,3 +721,5 @@
   paper: https://arxiv.org/abs/2603.07625v1
   resolved: true
   match_score: 1.0
+  venue_short: CVPR 2026
+  venue: IEEE/CVF Conference on Computer Vision and Pattern Recognition

@@ -52,10 +52,18 @@ must_not_match:
 #   dblp/crossref  CS conference papers absent from arXiv -- NOT implemented; this is how
 #                DeWave (NeurIPS), Lite-Mind (ACM MM) and the TPAMI block-design paper are
 #                currently invisible to automation
+# Measured 2026-08-20 on CVPR 2026: of its 19 brain-decoding papers, a 658-paper arXiv
+# sweep of the same period contained only 5. The other 14 -- including CineBrain, a new
+# large-scale audiovisual brain dataset -- were invisible to arXiv automation entirely.
+# One venue, one year, 74% missed. Proceedings listings are not an optional extra source.
 sources:
-  arxiv: implemented
-  europe_pmc: planned
-  dblp: planned
+  arxiv: implemented          # scripts/fetch_arxiv.py, 82% recall within its own reach
+  cvf_proceedings: implemented  # scripts/fetch_proceedings.py -- CVPR/ICCV/WACV listings
+  europe_pmc: planned         # neuroscience journals + bioRxiv
+  dblp: planned               # NeurIPS/ICML/ICLR/AAAI/ACM MM, which CVF does not cover
+
+# CVF venue slugs worth sweeping after each proceedings release.
+cvf_venues: [CVPR2026, CVPR2025, ICCV2025, WACV2026, WACV2025]
 
 # ---------------------------------------------------------------- change highlighting
 # Entries whose `added:` date is newer than the most recent release below are rendered as

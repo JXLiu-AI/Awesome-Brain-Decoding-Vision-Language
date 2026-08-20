@@ -48,7 +48,7 @@ Coverage: fMRI 32 · EEG 13 · MEG 5
 
 | Year | Paper | Modality | Venue | Data | Code |
 |---|---|---|---|---|---|
-| 2026 | <mark>[Duala: Dual-Level Alignment of Subjects and Stimuli for Cross-Subject fMRI Decoding](https://arxiv.org/abs/2603.07625v1)</mark>  | fMRI | — | Natural Scenes Dataset | [code](https://github.com/ShumengLI/Duala) |
+| 2026 | <mark>[Duala: Dual-Level Alignment of Subjects and Stimuli for Cross-Subject fMRI Decoding](https://arxiv.org/abs/2603.07625v1)</mark>  | fMRI | CVPR 2026 | Natural Scenes Dataset | [code](https://github.com/ShumengLI/Duala) |
 | 2025 | [MindAligner: Explicit Brain Functional Alignment for Cross-Subject Visual Decoding from Limited fMRI Data](https://arxiv.org/abs/2502.05034v1)  | fMRI | — | Natural Scenes Dataset | [code](https://github.com/Da1yuqin/MindAligner) |
 | 2024 | [Brain decoding: toward real-time reconstruction of visual perception](https://arxiv.org/abs/2310.19812v3)  | MEG | — | THINGS-MEG | — |
 | 2024 | [DREAM: Visual Decoding from Reversing Human Visual System](https://doi.org/10.1109/wacv57701.2024.00804)  | fMRI | WACV 2024 | Natural Scenes Dataset | [code](https://github.com/weihaox/DREAM) |
@@ -81,7 +81,7 @@ Coverage: fMRI 32 · EEG 13 · MEG 5
 
 | Year | Paper | Modality | Venue | Data | Code |
 |---|---|---|---|---|---|
-| 2026 | <mark>[Duala: Dual-Level Alignment of Subjects and Stimuli for Cross-Subject fMRI Decoding](https://arxiv.org/abs/2603.07625v1)</mark>  | fMRI | — | Natural Scenes Dataset | [code](https://github.com/ShumengLI/Duala) |
+| 2026 | <mark>[Duala: Dual-Level Alignment of Subjects and Stimuli for Cross-Subject fMRI Decoding](https://arxiv.org/abs/2603.07625v1)</mark>  | fMRI | CVPR 2026 | Natural Scenes Dataset | [code](https://github.com/ShumengLI/Duala) |
 | 2024 | [Brain decoding: toward real-time reconstruction of visual perception](https://arxiv.org/abs/2310.19812v3)  | MEG | — | THINGS-MEG | — |
 | 2024 | [Decoding Natural Images from EEG for Object Recognition](https://arxiv.org/abs/2308.13234v3)  | EEG | — | THINGS-EEG2 | — |
 | 2024 | [Lite-Mind: Towards Efficient and Robust Brain Representation Learning](https://doi.org/10.1145/3664647.3681229)  | fMRI | ACM MM 2024 | Natural Scenes Dataset | [code](https://github.com/gongzix/Lite-Mind) |
