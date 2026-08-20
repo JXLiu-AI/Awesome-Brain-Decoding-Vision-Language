@@ -1,0 +1,662 @@
+- key: horikawa2017
+  title: Generic decoding of seen and imagined objects using hierarchical visual features
+  year: 2017
+  modality:
+  - fMRI
+  task:
+  - representation
+  datasets:
+  - god
+  code: https://github.com/KamitaniLab/GenericObjectDecoding
+  arxiv: https://arxiv.org/abs/1510.06479v3
+  doi: 10.1038/ncomms15037
+  paper: https://doi.org/10.1038/ncomms15037
+  venue: Nature Communications
+  resolved: true
+  match_score: 1.0
+- key: shen2019
+  title: Deep image reconstruction from human brain activity
+  year: 2019
+  modality:
+  - fMRI
+  task:
+  - image-recon
+  datasets:
+  - deeprecon
+  code: https://github.com/KamitaniLab/DeepImageReconstruction
+  doi: 10.1371/journal.pcbi.1006633
+  paper: https://doi.org/10.1371/journal.pcbi.1006633
+  resolved: true
+  match_score: 1.0
+  venue: PLOS Computational Biology
+- key: beliy2019
+  title: 'From voxels to pixels and back: Self-supervision in natural-image reconstruction from fMRI'
+  year: 2019
+  modality:
+  - fMRI
+  task:
+  - image-recon
+  datasets:
+  - god
+  arxiv: https://arxiv.org/abs/1907.02431v1
+  paper: https://arxiv.org/abs/1907.02431v1
+  resolved: true
+  match_score: 1.0
+- key: gaziv2022
+  title: Self-supervised natural image reconstruction and large-scale semantic classification from brain activity
+  year: 2022
+  modality:
+  - fMRI
+  task:
+  - image-recon
+  datasets:
+  - god
+  doi: 10.1016/j.neuroimage.2022.119121
+  paper: https://doi.org/10.1016/j.neuroimage.2022.119121
+  resolved: true
+  match_score: 1.0
+  venue: NeuroImage
+- key: lin2022mindreader
+  title: 'Mind Reader: Reconstructing complex images from brain activities'
+  year: 2022
+  modality:
+  - fMRI
+  task:
+  - image-recon
+  datasets:
+  - nsd
+  arxiv: https://arxiv.org/abs/2210.01769v1
+  doi: 10.52202/068431-2148
+  paper: https://doi.org/10.52202/068431-2148
+  venue: Advances in Neural Information Processing Systems 35
+  resolved: true
+  match_score: 1.0
+- key: chen2023mindvis
+  title: 'Seeing Beyond the Brain: Conditional Diffusion Model with Sparse Masked Modeling for Vision Decoding'
+  year: 2023
+  modality:
+  - fMRI
+  task:
+  - image-recon
+  datasets:
+  - god
+  - bold5000
+  code: https://github.com/zjc062/mind-vis
+  arxiv: https://arxiv.org/abs/2211.06956v3
+  doi: 10.1109/cvpr52729.2023.02175
+  paper: https://doi.org/10.1109/cvpr52729.2023.02175
+  venue: 2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
+  resolved: true
+  match_score: 1.0
+- key: takagi2023
+  title: High-resolution image reconstruction with latent diffusion models from human brain activity
+  year: 2023
+  modality:
+  - fMRI
+  task:
+  - image-recon
+  datasets:
+  - nsd
+  doi: 10.1109/cvpr52729.2023.01389
+  paper: https://doi.org/10.1109/cvpr52729.2023.01389
+  resolved: true
+  match_score: 1.0
+  venue: 2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
+- key: ozcelik2023
+  title: Natural scene reconstruction from fMRI signals using generative latent diffusion
+  year: 2023
+  modality:
+  - fMRI
+  task:
+  - image-recon
+  datasets:
+  - nsd
+  code: https://github.com/ozcelikfu/brain-diffuser
+  arxiv: https://arxiv.org/abs/2303.05334v2
+  doi: 10.1038/s41598-023-42891-8
+  paper: https://doi.org/10.1038/s41598-023-42891-8
+  venue: Scientific Reports
+  resolved: true
+  match_score: 1.0
+- key: scotti2023mindeye
+  title: 'Reconstructing the Mind''s Eye: fMRI-to-Image with Contrastive Learning and Diffusion Priors'
+  year: 2023
+  modality:
+  - fMRI
+  task:
+  - image-recon
+  - image-retrieval
+  datasets:
+  - nsd
+  code: https://github.com/MedARC-AI/fMRI-reconstruction-NSD
+  arxiv: https://arxiv.org/abs/2305.18274v2
+  doi: 10.52202/075280-1073
+  paper: https://doi.org/10.52202/075280-1073
+  venue: Advances in Neural Information Processing Systems 36
+  resolved: true
+  match_score: 1.0
+- key: scotti2024mindeye2
+  title: 'MindEye2: Shared-Subject Models Enable fMRI-To-Image With 1 Hour of Data'
+  year: 2024
+  modality:
+  - fMRI
+  task:
+  - image-recon
+  datasets:
+  - nsd
+  code: https://github.com/MedARC-AI/MindEyeV2
+  arxiv: https://arxiv.org/abs/2403.11207v2
+  paper: https://arxiv.org/abs/2403.11207v2
+  resolved: true
+  match_score: 1.0
+- key: wang2023minddiffuser
+  title: 'MindDiffuser: Controlled Image Reconstruction from Human Brain Activity with Semantic and Structural Diffusion'
+  year: 2023
+  modality:
+  - fMRI
+  task:
+  - image-recon
+  datasets:
+  - nsd
+  arxiv: https://arxiv.org/abs/2303.14139v1
+  doi: 10.1145/3581783.3613832
+  paper: https://doi.org/10.1145/3581783.3613832
+  venue: Proceedings of the 31st ACM International Conference on Multimedia
+  resolved: true
+  match_score: 1.0
+- key: xia2024dream
+  title: 'DREAM: Visual Decoding from Reversing Human Visual System'
+  year: 2024
+  modality:
+  - fMRI
+  task:
+  - image-recon
+  datasets:
+  - nsd
+  code: https://github.com/weihaox/DREAM
+  arxiv: https://arxiv.org/abs/2310.02265v2
+  paper: https://doi.org/10.1109/wacv57701.2024.00804
+  resolved: true
+  match_score: 1.0
+  doi: 10.1109/wacv57701.2024.00804
+  venue: 2024 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)
+- key: lu2024mindbridge
+  title: 'MindBridge: A Cross-Subject Brain Decoding Framework'
+  year: 2024
+  modality:
+  - fMRI
+  task:
+  - image-recon
+  datasets:
+  - nsd
+  code: https://github.com/littlepure2333/MindBridge
+  arxiv: https://arxiv.org/abs/2404.07850v1
+  doi: 10.1109/cvpr52733.2024.01077
+  paper: https://doi.org/10.1109/cvpr52733.2024.01077
+  venue: 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
+  resolved: true
+  match_score: 1.0
+- key: huo2024neuropictor
+  title: 'NeuroPictor: Refining fMRI-to-Image Reconstruction via Multi-individual Pretraining and Multi-level Modulation'
+  year: 2024
+  modality:
+  - fMRI
+  task:
+  - image-recon
+  datasets:
+  - nsd
+  arxiv: https://arxiv.org/abs/2403.18211v2
+  doi: 10.1007/978-3-031-72983-6_4
+  paper: https://doi.org/10.1007/978-3-031-72983-6_4
+  venue: Lecture Notes in Computer Science
+  resolved: true
+  match_score: 1.0
+  venue_short: ECCV 2024
+- key: gong2024litemind
+  title: 'Lite-Mind: Towards Efficient and Robust Brain Representation Learning'
+  year: 2024
+  modality:
+  - fMRI
+  task:
+  - image-retrieval
+  datasets:
+  - nsd
+  code: https://github.com/gongzix/Lite-Mind
+  doi: 10.1145/3664647.3681229
+  paper: https://doi.org/10.1145/3664647.3681229
+  venue: Proceedings of the 32nd ACM International Conference on Multimedia
+  resolved: true
+  match_score: 1.0
+- key: xia2024umbrae
+  title: 'UMBRAE: Unified Multimodal Brain Decoding'
+  year: 2024
+  modality:
+  - fMRI
+  task:
+  - captioning
+  - image-recon
+  datasets:
+  - nsd
+  code: https://github.com/weihaox/UMBRAE
+  arxiv: https://arxiv.org/abs/2404.07202v2
+  doi: 10.1007/978-3-031-72667-5_14
+  paper: https://doi.org/10.1007/978-3-031-72667-5_14
+  venue: Lecture Notes in Computer Science
+  resolved: true
+  match_score: 1.0
+  venue_short: ECCV 2024
+- key: ferrante2023braincaptioning
+  title: 'Brain Captioning: Decoding human brain activity into images and text'
+  year: 2023
+  modality:
+  - fMRI
+  task:
+  - captioning
+  datasets:
+  - nsd
+  arxiv: https://arxiv.org/abs/2305.11560v1
+  paper: https://arxiv.org/abs/2305.11560v1
+  resolved: true
+  match_score: 1.0
+- key: mindaligner2025
+  title: 'MindAligner: Explicit Brain Functional Alignment for Cross-Subject Visual Decoding from Limited fMRI Data'
+  year: 2025
+  modality:
+  - fMRI
+  task:
+  - image-recon
+  datasets:
+  - nsd
+  code: https://github.com/Da1yuqin/MindAligner
+  arxiv: https://arxiv.org/abs/2502.05034v1
+  paper: https://arxiv.org/abs/2502.05034v1
+  resolved: true
+  match_score: 1.0
+- key: liu2025glim
+  title: Learning Interpretable Representations Leads to Semantically Faithful EEG-to-Text Generation
+  year: 2025
+  modality:
+  - fMRI
+  task:
+  - captioning
+  code: https://github.com/justin-xzliu/GLIM
+  arxiv: https://arxiv.org/abs/2505.17099v1
+  paper: https://arxiv.org/abs/2505.17099v1
+  resolved: true
+  match_score: 1.0
+- key: wen2018video
+  title: Neural Encoding and Decoding with Deep Learning for Dynamic Natural Vision
+  year: 2018
+  modality:
+  - fMRI
+  task:
+  - video-recon
+  arxiv: https://arxiv.org/abs/1608.03425v2
+  doi: 10.1093/cercor/bhx268
+  paper: https://doi.org/10.1093/cercor/bhx268
+  venue: Cerebral Cortex
+  resolved: true
+  match_score: 1.0
+- key: chen2023mindvideo
+  title: 'Cinematic Mindscapes: High-quality Video Reconstruction from Brain Activity'
+  year: 2023
+  modality:
+  - fMRI
+  task:
+  - video-recon
+  code: https://github.com/jqin4749/MindVideo
+  arxiv: https://arxiv.org/abs/2305.11675v1
+  doi: 10.52202/075280-1079
+  paper: https://doi.org/10.52202/075280-1079
+  venue: Advances in Neural Information Processing Systems 36
+  resolved: true
+  match_score: 1.0
+- key: gong2024neuroclips
+  title: 'NeuroClips: Towards High-fidelity and Smooth fMRI-to-Video Reconstruction'
+  year: 2024
+  modality:
+  - fMRI
+  task:
+  - video-recon
+  code: https://github.com/gongzix/NeuroClips
+  arxiv: https://arxiv.org/abs/2410.19452v3
+  doi: 10.52202/079017-1636
+  paper: https://doi.org/10.52202/079017-1636
+  venue: Advances in Neural Information Processing Systems 37
+  resolved: true
+  match_score: 1.0
+- key: spampinato2017
+  title: Deep Learning Human Mind for Automated Visual Classification
+  year: 2017
+  modality:
+  - EEG
+  task:
+  - representation
+  datasets:
+  - eeg-imagenet-spampinato
+  flags:
+  - block-design
+  arxiv: https://arxiv.org/abs/1609.00344v2
+  doi: 10.1109/cvpr.2017.479
+  paper: https://doi.org/10.1109/cvpr.2017.479
+  venue: 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)
+  resolved: true
+  match_score: 1.0
+- key: li2021perils
+  title: The Perils and Pitfalls of Block Design for EEG Classification Experiments
+  year: 2021
+  modality:
+  - EEG
+  task:
+  - eval
+  datasets:
+  - eeg-imagenet-spampinato
+  doi: 10.1109/tpami.2020.2973153
+  paper: https://doi.org/10.1109/tpami.2020.2973153
+  venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
+  resolved: true
+  match_score: 1.0
+- key: bai2023dreamdiffusion
+  title: 'DreamDiffusion: Generating High-Quality Images from Brain EEG Signals'
+  year: 2023
+  modality:
+  - EEG
+  task:
+  - image-recon
+  code: https://github.com/bbaaii/DreamDiffusion
+  arxiv: https://arxiv.org/abs/2306.16934v2
+  paper: https://arxiv.org/abs/2306.16934v2
+  resolved: true
+  match_score: 1.0
+- key: song2024nice
+  title: Decoding Natural Images from EEG for Object Recognition
+  year: 2024
+  modality:
+  - EEG
+  task:
+  - image-retrieval
+  datasets:
+  - things-eeg2
+  arxiv: https://arxiv.org/abs/2308.13234v3
+  paper: https://arxiv.org/abs/2308.13234v3
+  resolved: true
+  match_score: 1.0
+- key: li2024eegimagedecode
+  title: Visual Decoding and Reconstruction via EEG Embeddings with Guided Diffusion
+  year: 2024
+  modality:
+  - EEG
+  task:
+  - image-recon
+  - image-retrieval
+  datasets:
+  - things-eeg2
+  code: https://github.com/dongyangli-del/EEG_Image_decode
+  arxiv: https://arxiv.org/abs/2403.07721v7
+  doi: 10.52202/079017-3266
+  paper: https://doi.org/10.52202/079017-3266
+  venue: Advances in Neural Information Processing Systems 37
+  resolved: true
+  match_score: 1.0
+- key: benchetrit2024meg
+  title: 'Brain decoding: toward real-time reconstruction of visual perception'
+  year: 2024
+  modality:
+  - MEG
+  task:
+  - image-recon
+  - image-retrieval
+  datasets:
+  - things-meg
+  arxiv: https://arxiv.org/abs/2310.19812v3
+  paper: https://arxiv.org/abs/2310.19812v3
+  resolved: true
+  match_score: 1.0
+- key: gifford2022thingseeg2
+  title: A large and rich EEG dataset for modeling human visual object recognition
+  year: 2022
+  modality:
+  - EEG
+  task:
+  - representation
+  datasets:
+  - things-eeg2
+  doi: 10.32470/ccn.2022.1029-0
+  paper: https://doi.org/10.32470/ccn.2022.1029-0
+  resolved: true
+  match_score: 1.0
+  venue: 2022 Conference on Cognitive Computational Neuroscience
+- key: huth2016semanticmaps
+  title: Natural speech reveals the semantic maps that tile human cerebral cortex
+  year: 2016
+  modality:
+  - fMRI
+  task:
+  - representation
+  doi: 10.1038/nature17637
+  paper: https://doi.org/10.1038/nature17637
+  venue: Nature
+  resolved: true
+  match_score: 1.0
+- key: pereira2018
+  title: Toward a universal decoder of linguistic meaning from brain activation
+  year: 2018
+  modality:
+  - fMRI
+  task:
+  - language-recon
+  datasets:
+  - pereira2018
+  doi: 10.1038/s41467-018-03068-4
+  paper: https://doi.org/10.1038/s41467-018-03068-4
+  venue: Nature Communications
+  resolved: true
+  match_score: 1.0
+- key: schrimpf2021
+  title: 'The neural architecture of language: Integrative modeling converges on predictive processing'
+  year: 2021
+  modality:
+  - fMRI
+  task:
+  - representation
+  doi: 10.1073/pnas.2105646118
+  paper: https://doi.org/10.1073/pnas.2105646118
+  resolved: true
+  match_score: 1.0
+  venue: Proceedings of the National Academy of Sciences
+- key: caucheteux2022converge
+  title: Brains and algorithms partially converge in natural language processing
+  year: 2022
+  modality:
+  - fMRI
+  task:
+  - representation
+  doi: 10.1038/s42003-022-03036-1
+  paper: https://doi.org/10.1038/s42003-022-03036-1
+  venue: Communications Biology
+  resolved: true
+  match_score: 1.0
+- key: tang2023semantic
+  title: Semantic reconstruction of continuous language from non-invasive brain recordings
+  year: 2023
+  modality:
+  - fMRI
+  task:
+  - language-recon
+  datasets:
+  - lebel-moth
+  code: https://github.com/HuthLab/semantic-decoding
+  doi: 10.1038/s41593-023-01304-9
+  paper: https://doi.org/10.1038/s41593-023-01304-9
+  resolved: true
+  match_score: 1.0
+  venue: Nature Neuroscience
+- key: antonello2023scaling
+  title: Scaling laws for language encoding models in fMRI
+  year: 2023
+  modality:
+  - fMRI
+  task:
+  - representation
+  datasets:
+  - lebel-moth
+  arxiv: https://arxiv.org/abs/2305.11863v4
+  doi: 10.52202/075280-0958
+  paper: https://doi.org/10.52202/075280-0958
+  venue: Advances in Neural Information Processing Systems 36
+  resolved: true
+  match_score: 1.0
+- key: xia2024unibrain
+  title: 'UniBrain: Unify Image Reconstruction and Captioning All in One Diffusion Model from Human Brain Activity'
+  year: 2024
+  modality:
+  - fMRI
+  task:
+  - image-recon
+  - captioning
+  datasets:
+  - nsd
+  arxiv: https://arxiv.org/abs/2308.07428v1
+  paper: https://arxiv.org/abs/2308.07428v1
+  resolved: true
+  match_score: 1.0
+- key: wang2022eeg2text
+  title: Open Vocabulary Electroencephalography-To-Text Decoding and Zero-shot Sentiment Classification
+  year: 2022
+  modality:
+  - EEG
+  task:
+  - text-decoding
+  datasets:
+  - zuco
+  flags:
+  - teacher-forcing
+  arxiv: https://arxiv.org/abs/2112.02690v3
+  doi: 10.1609/aaai.v36i5.20472
+  paper: https://doi.org/10.1609/aaai.v36i5.20472
+  venue: Proceedings of the AAAI Conference on Artificial Intelligence
+  resolved: true
+  match_score: 1.0
+- key: duan2023dewave
+  title: 'DeWave: Discrete Encoding of EEG Waves for EEG to Text Translation'
+  year: 2023
+  modality:
+  - EEG
+  task:
+  - text-decoding
+  datasets:
+  - zuco
+  flags:
+  - teacher-forcing
+  doi: 10.52202/075280-0432
+  paper: https://doi.org/10.52202/075280-0432
+  venue: Advances in Neural Information Processing Systems 36
+  resolved: true
+  match_score: 1.0
+- key: jo2024areeegtext
+  title: Are EEG-to-Text Models Working?
+  year: 2024
+  modality:
+  - EEG
+  task:
+  - eval
+  datasets:
+  - zuco
+  arxiv: https://arxiv.org/abs/2405.06459v4
+  doi: 10.2139/ssrn.4882932
+  paper: https://doi.org/10.2139/ssrn.4882932
+  resolved: true
+  match_score: 1.0
+- key: defossez2023speech
+  title: Decoding speech perception from non-invasive brain recordings
+  year: 2023
+  modality:
+  - MEG
+  - EEG
+  task:
+  - speech-decoding
+  datasets:
+  - meg-masc
+  - broderick-natural-speech
+  - brennan-alice
+  - mous
+  code: https://github.com/facebookresearch/brainmagick
+  arxiv: https://arxiv.org/abs/2208.12266v2
+  doi: 10.1038/s42256-023-00714-5
+  paper: https://doi.org/10.1038/s42256-023-00714-5
+  venue: Nature Machine Intelligence
+  resolved: true
+  match_score: 1.0
+- key: yang2023megtotext
+  title: Semantic reconstruction of continuous language from MEG signals
+  year: 2023
+  modality:
+  - MEG
+  task:
+  - language-recon
+  arxiv: https://arxiv.org/abs/2309.07701v1
+  doi: 10.1109/icassp48485.2024.10448281
+  paper: https://doi.org/10.1109/icassp48485.2024.10448281
+  venue: ICASSP 2024 - 2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)
+  resolved: true
+  match_score: 1.0
+- key: levy2025brain2qwerty
+  title: 'Brain-to-Text Decoding: A Non-invasive Approach via Typing'
+  year: 2025
+  modality:
+  - MEG
+  - EEG
+  task:
+  - text-decoding
+  code: https://github.com/facebookresearch/brain2qwerty
+  arxiv: https://arxiv.org/abs/2502.17480v1
+  paper: https://arxiv.org/abs/2502.17480v1
+  resolved: true
+  match_score: 1.0
+- key: zhou2024crosssubjectsplit
+  title: Rethinking Cross-Subject Data Splitting for Brain-to-Text Decoding
+  year: 2024
+  modality:
+  - EEG
+  task:
+  - eval
+  datasets:
+  - zuco
+  arxiv: https://arxiv.org/abs/2312.10987v4
+  doi: 10.18653/v1/2025.emnlp-main.289
+  paper: https://doi.org/10.18653/v1/2025.emnlp-main.289
+  venue: Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing
+  resolved: true
+  match_score: 1.0
+- key: mai2025aigcbrain
+  title: 'Brain-Conditional Multimodal Synthesis: A Survey and Taxonomy'
+  year: 2025
+  modality:
+  - fMRI
+  - EEG
+  - MEG
+  task:
+  - survey
+  code: https://github.com/MichaelMaiii/AIGC-Brain
+  arxiv: https://arxiv.org/abs/2401.00430v2
+  doi: 10.1109/tai.2024.3516698
+  paper: https://doi.org/10.1109/tai.2024.3516698
+  venue: IEEE Transactions on Artificial Intelligence
+  resolved: true
+  match_score: 1.0
+- key: xia2026basic
+  title: Multigranular Evaluation for Brain Visual Decoding
+  year: 2026
+  modality:
+  - fMRI
+  task:
+  - eval
+  datasets:
+  - nsd
+  code: https://github.com/weihaox/BASIC
+  arxiv: https://arxiv.org/abs/2507.07993v2
+  doi: 10.1609/aaai.v40i21.38845
+  paper: https://doi.org/10.1609/aaai.v40i21.38845
+  venue: Proceedings of the AAAI Conference on Artificial Intelligence
+  resolved: true
+  match_score: 1.0

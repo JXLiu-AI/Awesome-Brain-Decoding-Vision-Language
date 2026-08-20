@@ -1,0 +1,63 @@
+# Evaluation pitfalls that silently break cross-paper comparison.
+# Every entry must name the paper that established it. Referenced from papers.yaml `flags:`.
+
+- id: block-design
+  name: Block design leakage in EEG visual classification
+  applies_to: [EEG]
+  what: >-
+    In the Spampinato et al. (2017) EEG-ImageNet paradigm, all images of a class were
+    presented in one contiguous block. Slow non-stimulus drift within a block is enough to
+    identify the class, so a classifier can reach very high accuracy without using any
+    visual information at all.
+  consequence: >-
+    Accuracies reported on that dataset (and on any derivative that keeps the block
+    structure) do not measure visual decoding and must not be compared against
+    trial-randomised datasets such as THINGS-EEG2.
+  established_by: li2021perils
+  how_to_check: Shuffle the class labels within a block. If accuracy stays high, you are decoding drift.
+
+- id: teacher-forcing
+  name: Teacher forcing left on at evaluation in EEG-to-text
+  applies_to: [EEG, MEG]
+  what: >-
+    A large fraction of published EEG-to-text results feed the ground-truth previous token
+    into the decoder at test time. The model is scored on next-token prediction given the
+    true prefix, not on generating the sentence.
+  consequence: >-
+    Reported BLEU/ROUGE are close to what the same model produces from pure noise input.
+    Numbers obtained this way are not comparable with free-running generation and should be
+    labelled as such in any table.
+  established_by: jo2024areeegtext
+  how_to_check: Replace the brain input with Gaussian noise. If the metrics barely move, teacher forcing is doing the work.
+
+- id: repeat-averaging
+  name: Averaging stimulus repeats at test time
+  applies_to: [fMRI]
+  what: >-
+    NSD test images were each viewed three times. Some papers average the three trials
+    before decoding, some decode from a single trial.
+  consequence: Averaging raises SNR substantially. A 3-repeat number and a single-trial number are different tasks.
+  how_to_check: Look for "averaged over repetitions" in the evaluation subsection, not the dataset subsection.
+
+- id: retrieval-pool
+  name: Retrieval pool size not held constant
+  applies_to: [fMRI, EEG, MEG]
+  what: >-
+    Top-1 image retrieval accuracy depends directly on how many distractors are in the pool
+    (300-way, 982-way and full-test-set retrieval all appear in the literature).
+  consequence: Retrieval numbers are meaningless without the pool size next to them.
+  how_to_check: Every retrieval cell in a comparison table needs an explicit N.
+
+- id: subject-specific-vs-cross
+  name: Subject-specific models compared against cross-subject models
+  applies_to: [fMRI, EEG, MEG]
+  what: >-
+    Most strong reconstruction results train one model per subject on tens of hours of that
+    subject's data. Cross-subject and low-data methods solve a strictly harder problem.
+  consequence: A cross-subject method losing to a subject-specific one is not evidence that it is worse.
+  how_to_check: Record hours-of-target-subject-data as a column, not a footnote.
+
+- key_note: >-
+    This file is the reason the repo exists. Any table in this repository that cannot state
+    its split, its pool size and its per-subject data budget is marked incomparable rather
+    than shown as a ranking.

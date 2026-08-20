@@ -1,0 +1,45 @@
+name: Daily arXiv sweep
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+    inputs:
+      days:
+        description: lookback window in days
+        default: "2"
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pyyaml
+      - id: fetch
+        continue-on-error: true
+        run: |
+          python scripts/fetch_arxiv.py --days "${{ github.event.inputs.days || 2 }}" --out pending.md
+          echo "has_candidates=true" >> "$GITHUB_OUTPUT"
+      - name: Open review issue
+        if: steps.fetch.outputs.has_candidates == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --title "arXiv candidates $(date -u +%Y-%m-%d)" \
+            --label "candidate" \
+            --body-file pending.md
+      - name: Persist seen list
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/seen_arxiv.json
+          git diff --staged --quiet || git commit -m "chore: update arXiv seen list"
+          git push

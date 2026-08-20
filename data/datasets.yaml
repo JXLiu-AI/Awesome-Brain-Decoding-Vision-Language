@@ -1,0 +1,242 @@
+# Datasets for non-invasive brain decoding of vision and language.
+#
+# Field contract (see CONTRIBUTING.md):
+#   id            short slug, referenced by papers.yaml `datasets:`
+#   modality      fMRI | EEG | MEG (list)
+#   domain        vision | language | both
+#   subjects      number of subjects with released data
+#   per_subject   amount of data per subject -- the number that actually limits decoders
+#   access        open | registration | agreement | request
+#   split         the split convention papers actually use, if one exists
+#   verified      true only after a human checked the numbers against the paper or portal
+#   caveats       things that silently break comparisons
+
+- id: nsd
+  name: Natural Scenes Dataset (NSD)
+  modality: [fMRI]
+  domain: vision
+  subjects: 8
+  field_strength: 7T
+  stimuli: 73000 unique COCO images, 9000-10000 per subject
+  per_subject: up to 40 scan sessions; only subj01/02/05/07 completed all 40
+  access: agreement
+  split: >-
+    de-facto standard is the 982 shared images that all 8 subjects saw and that
+    survive in the held-out set; most papers report on subj01/02/05/07
+  paper: https://doi.org/10.1038/s41593-021-00962-x
+  url: https://naturalscenesdataset.org
+  verified: false
+  caveats:
+    - Papers differ on whether they average the 3 repeats of each test image. Averaging lifts every metric.
+    - Only 4 of 8 subjects completed all sessions, so "averaged over subjects" means different things in different papers.
+
+- id: bold5000
+  name: BOLD5000
+  modality: [fMRI]
+  domain: vision
+  subjects: 4
+  field_strength: 3T
+  stimuli: 5254 images from ImageNet, COCO and SUN
+  per_subject: 15 sessions (CSI4 completed 9)
+  access: open
+  paper: https://doi.org/10.1038/s41597-019-0052-3
+  url: https://bold5000.github.io
+  verified: false
+  caveats:
+    - Far fewer repeats per image than NSD; single-trial numbers here are not comparable to NSD numbers.
+
+- id: god
+  name: Generic Object Decoding (GOD, Kamitani lab)
+  modality: [fMRI]
+  domain: vision
+  subjects: 5
+  stimuli: 1200 training + 50 test images over 150 + 50 ImageNet categories
+  access: open
+  split: fixed train/test split with disjoint categories
+  paper: https://doi.org/10.1038/ncomms15037
+  url: https://github.com/KamitaniLab/GenericObjectDecoding
+  verified: false
+  caveats:
+    - Test categories are disjoint from training categories, so this measures category generalisation. NSD does not.
+
+- id: deeprecon
+  name: Deep Image Reconstruction (Shen et al.)
+  modality: [fMRI]
+  domain: vision
+  subjects: 3
+  stimuli: natural images, artificial shapes, alphabetical letters
+  access: open
+  paper: https://doi.org/10.1371/journal.pcbi.1006633
+  url: https://github.com/KamitaniLab/DeepImageReconstruction
+  verified: false
+
+- id: things-fmri
+  name: THINGS-fMRI (THINGS-data)
+  modality: [fMRI]
+  domain: vision
+  subjects: 3
+  field_strength: 3T
+  stimuli: 8740 images from the THINGS concept set
+  access: open
+  paper: https://doi.org/10.7554/eLife.82580
+  url: https://things-initiative.org
+  verified: false
+  caveats:
+    - Shares its stimulus set with THINGS-MEG and THINGS-EEG, the only clean route to cross-modality comparison.
+
+- id: things-meg
+  name: THINGS-MEG
+  modality: [MEG]
+  domain: vision
+  subjects: 4
+  stimuli: 22448 image presentations from the THINGS concept set
+  access: open
+  paper: https://doi.org/10.7554/eLife.82580
+  url: https://things-initiative.org
+  verified: false
+
+- id: things-eeg2
+  name: THINGS-EEG2 (Gifford et al.)
+  modality: [EEG]
+  domain: vision
+  subjects: 10
+  channels: 63
+  stimuli: 16740 image conditions under rapid serial visual presentation
+  split: 1654 training concepts / 200 held-out test concepts
+  access: open
+  paper: https://doi.org/10.1016/j.neuroimage.2022.119754
+  url: https://osf.io/3jk45/
+  verified: false
+  caveats:
+    - RSVP means about 100 ms per image. Reconstruction quality here is bounded by the paradigm, not only by the model.
+
+- id: things-eeg1
+  name: THINGS-EEG1 (Grootswagers et al.)
+  modality: [EEG]
+  domain: vision
+  subjects: 50
+  stimuli: 22248 images, RSVP at several presentation rates
+  access: open
+  paper: https://doi.org/10.1038/s41597-021-01102-7
+  verified: false
+
+- id: eeg-imagenet-spampinato
+  name: EEG-ImageNet (Spampinato et al., CVPR 2017)
+  modality: [EEG]
+  domain: vision
+  subjects: 6
+  stimuli: 2000 ImageNet images over 40 classes
+  access: open
+  paper: https://doi.org/10.1109/CVPR.2017.479
+  status: deprecated
+  verified: false
+  caveats:
+    - >-
+      BLOCK DESIGN CONFOUND. All images of a class were shown in one contiguous block, so
+      slow drift alone identifies the class. Accuracies on this dataset do not measure
+      visual decoding. See docs/pitfalls.md. Do not use for new work.
+
+- id: narratives
+  name: Narratives
+  modality: [fMRI]
+  domain: language
+  subjects: 345
+  stimuli: 27 spoken stories, 891 functional scans
+  access: open
+  paper: https://doi.org/10.1038/s41597-021-01033-3
+  url: https://openneuro.org/datasets/ds002345
+  verified: false
+
+- id: lebel-moth
+  name: Natural language fMRI dataset (LeBel et al., Moth Radio Hour)
+  modality: [fMRI]
+  domain: language
+  subjects: 8
+  stimuli: spoken narrative stories
+  per_subject: more than 5 hours of scanning; the 3 core subjects have far more
+  access: open
+  split: held-out story used as test
+  paper: https://doi.org/10.1038/s41597-023-02437-z
+  url: https://openneuro.org/datasets/ds003020
+  verified: false
+  caveats:
+    - This is the dataset behind Tang et al. 2023. Only a few subjects have the deep sessions the headline results rely on.
+
+- id: pereira2018
+  name: Pereira et al. 2018 sentence fMRI
+  modality: [fMRI]
+  domain: language
+  subjects: 16
+  stimuli: single concepts, sentences and passages
+  access: open
+  paper: https://doi.org/10.1038/s41467-018-03068-4
+  verified: false
+
+- id: mous
+  name: MOUS (Mother Of Unification Studies)
+  modality: [MEG, fMRI]
+  domain: language
+  subjects: 204
+  stimuli: Dutch sentences and word lists, read and listened
+  access: open
+  paper: https://doi.org/10.1038/s41597-019-0020-y
+  verified: false
+
+- id: zuco
+  name: ZuCo 1.0 / 2.0
+  modality: [EEG]
+  domain: language
+  subjects: 12 (v1) / 18 (v2)
+  stimuli: natural reading and task-specific reading with simultaneous eye-tracking
+  access: open
+  paper: https://doi.org/10.1038/sdata.2018.291
+  url: https://osf.io/q3zws/
+  verified: false
+  caveats:
+    - >-
+      Word-level EEG segments are cut using eye-tracking fixations, so any EEG-to-text
+      result on ZuCo has eye-tracking-derived word boundaries baked into its input.
+    - Most published EEG-to-text numbers on ZuCo were produced with teacher forcing at evaluation time. See docs/pitfalls.md.
+
+- id: brennan-alice
+  name: Brennan and Hale "Alice" EEG
+  modality: [EEG]
+  domain: language
+  subjects: 33
+  stimuli: about 12 minutes of an audiobook
+  access: open
+  paper: https://doi.org/10.1371/journal.pone.0207741
+  verified: false
+
+- id: broderick-natural-speech
+  name: Natural Speech (Broderick et al.)
+  modality: [EEG]
+  domain: language
+  subjects: 19
+  stimuli: about 1 hour of audiobook per subject
+  access: open
+  paper: https://doi.org/10.1016/j.cub.2018.01.080
+  verified: false
+
+- id: meg-masc
+  name: MEG-MASC
+  modality: [MEG]
+  domain: language
+  subjects: 27
+  stimuli: 4 naturalistic stories, about 2 hours per subject
+  access: open
+  paper: https://doi.org/10.1038/s41597-023-02752-5
+  url: https://osf.io/ag3kj/
+  verified: false
+
+- id: armeni2022
+  name: Armeni et al. 10-hour MEG audiobook
+  modality: [MEG]
+  domain: language
+  subjects: 3
+  stimuli: about 10 hours of audiobook per subject
+  access: open
+  paper: https://doi.org/10.1038/s41597-022-01382-7
+  verified: false
+  caveats:
+    - Deepest per-subject language MEG data available, the natural target for subject-specific scaling experiments.

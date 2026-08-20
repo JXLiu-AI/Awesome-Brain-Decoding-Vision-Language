@@ -1,0 +1,32 @@
+# Coverage policy and automation config.
+#
+# Scope decision, from an arXiv volume count run in Aug 2026 (per-year hits on the
+# queries below): the field roughly doubled every year from 2023 and 2026 had already
+# matched or passed full-year 2025 by August. Exhaustive coverage back to 2019 would be
+# ~450 entries and unmaintainable; exhaustive back to 2024 is ~250 and is where the
+# overwhelming majority of results that anyone still cites live.
+coverage:
+  exhaustive_since: 2024-01-01   # everything in scope gets an entry
+  curated_before: 2024-01-01     # milestones only, no completeness claim
+  rationale_counts:              # arXiv title/abstract hits per year, measured 2026-08
+    fMRI-vision:   {2019: 1, 2020: 3, 2021: 3, 2022: 4, 2023: 11, 2024: 20, 2025: 27, 2026: 14}
+    EEG-vision:    {2019: 0, 2020: 0, 2021: 0, 2022: 1, 2023: 5,  2024: 11, 2025: 12, 2026: 24}
+    MEG-any:       {2019: 1, 2020: 1, 2021: 1, 2022: 4, 2023: 3,  2024: 13, 2025: 17, 2026: 22}
+    brain-to-text: {2019: 0, 2020: 0, 2021: 2, 2022: 1, 2023: 4,  2024: 20, 2025: 20, 2026: 24}
+    fMRI-language: {2019: 1, 2020: 4, 2021: 2, 2022: 7, 2023: 23, 2024: 34, 2025: 34, 2026: 25}
+    note: 2026 counts are partial (through August) and already at or above full-year 2025.
+
+arxiv_queries:
+  - 'all:fMRI AND (all:"image reconstruction" OR all:"visual decoding" OR all:"visual reconstruction")'
+  - 'all:EEG AND (all:"visual decoding" OR all:"image reconstruction" OR all:"image decoding")'
+  - 'all:MEG AND all:decoding AND (all:speech OR all:language OR all:visual OR all:image)'
+  - 'all:"brain-to-text" OR all:"EEG-to-text" OR all:"MEG-to-text"'
+  - 'all:fMRI AND all:decoding AND (all:language OR all:semantic OR all:speech)'
+  - 'all:"brain decoding" AND (all:diffusion OR all:"vision language" OR all:LLM)'
+
+# A candidate must match at least one of these in title or abstract. Keeps the sweep from
+# dragging in motor imagery, seizure detection and emotion recognition.
+must_match:
+  - '\b(fMRI|EEG|MEG|magnetoencephalograph|electroencephalograph|neuroimag)'
+must_not_match:
+  - '\b(motor imagery|seizure|epilep|sleep stag|emotion recognition|driver drowsi)'

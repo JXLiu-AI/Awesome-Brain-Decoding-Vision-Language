@@ -1,0 +1,29 @@
+# Venue name normalisation. Crossref returns the full series title ("Lecture Notes in
+# Computer Science" for an ECCV paper), which is useless in a comparison table.
+# Each entry is [regex, short_name, append_year]. First match wins, case-insensitive.
+# A `venue_short:` field on a paper overrides everything here.
+patterns:
+  - [ 'IEEE/CVF Conference on Computer Vision and Pattern Recognition', 'CVPR',    true ]
+  - [ 'Computer Vision and Pattern Recognition',                        'CVPR',    true ]
+  - [ 'Winter Conference on Applications of Computer Vision',           'WACV',    true ]
+  - [ 'IEEE/CVF International Conference on Computer Vision',           'ICCV',    true ]
+  - [ 'European Conference on Computer Vision',                         'ECCV',    true ]
+  - [ 'Neural Information Processing Systems',                          'NeurIPS', true ]
+  - [ 'International Conference on Learning Representations',           'ICLR',    true ]
+  - [ 'International Conference on Machine Learning',                   'ICML',    true ]
+  - [ 'AAAI Conference on Artificial Intelligence',                     'AAAI',    true ]
+  - [ 'ACM International Conference on Multimedia',                     'ACM MM',  true ]
+  - [ 'Association for Computational Linguistics',                      'ACL',     true ]
+  - [ 'Empirical Methods in Natural Language Processing',               'EMNLP',   true ]
+  - [ 'Nature Neuroscience',                        'Nat Neurosci',     false ]
+  - [ 'Nature Machine Intelligence',                'Nat Mach Intell',  false ]
+  - [ 'Nature Communications',                      'Nat Commun',       false ]
+  - [ 'Scientific Reports',                         'Sci Rep',          false ]
+  - [ 'Scientific Data',                            'Sci Data',         false ]
+  - [ 'Proceedings of the National Academy',        'PNAS',             false ]
+  - [ 'PLoS Computational Biology',                 'PLoS Comput Biol', false ]
+  - [ 'Current Biology',                            'Curr Biol',        false ]
+  - [ 'NeuroImage',                                 'NeuroImage',       false ]
+  # LNCS is the ECCV/MICCAI series title -- if you see this, set venue_short on the paper
+  - [ 'Lecture Notes in Computer Science',          'LNCS ⚠️ set venue_short', false ]
+  - [ 'bioRxiv|arXiv|Cold Spring Harbor|Research Square', 'preprint',   false ]
