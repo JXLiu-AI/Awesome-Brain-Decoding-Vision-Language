@@ -156,9 +156,9 @@
   code: https://github.com/MedARC-AI/MindEyeV2
   arxiv: https://arxiv.org/abs/2403.11207v2
   paper: https://arxiv.org/abs/2403.11207v2
-  resolved: true
   match_score: 1.0
   added: '2026-08-20'
+  resolved: true
 - key: wang2023minddiffuser
   title: 'MindDiffuser: Controlled Image Reconstruction from Human Brain Activity with Semantic and Structural Diffusion'
   year: 2023
@@ -719,10 +719,10 @@
   added: 2026-08-20T14:00
   arxiv: https://arxiv.org/abs/2603.07625v1
   paper: https://arxiv.org/abs/2603.07625v1
-  resolved: true
   match_score: 1.0
   venue_short: CVPR 2026
   venue: IEEE/CVF Conference on Computer Vision and Pattern Recognition
+  resolved: true
 - key: liu2026mindadapter
   title: 'MindAdapter: Few-Shot Parameter-Efficient Residual Calibration of Cross-Subject Brain-to-Visual Decoding
     Models'
@@ -734,11 +734,10 @@
   - image-retrieval
   datasets:
   - nsd
-  venue_short: KDD 2026
   added: 2026-08-20T15:00
   arxiv: https://arxiv.org/abs/2605.24679v1
   doi: 10.1145/3770855.3818949
   paper: https://doi.org/10.1145/3770855.3818949
   venue: Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2
-  resolved: true
   match_score: 1.0
+  resolved: true

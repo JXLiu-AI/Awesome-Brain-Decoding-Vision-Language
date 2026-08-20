@@ -13,6 +13,8 @@ patterns:
   - [ 'International Conference on Machine Learning',                   'ICML',    true ]
   - [ 'AAAI Conference on Artificial Intelligence',                     'AAAI',    true ]
   - [ 'ACM International Conference on Multimedia',                     'ACM MM',  true ]
+  - [ 'SIGKDD Conference on Knowledge Discovery',                       'KDD',     true ]
+  - [ 'Knowledge Discovery and Data Mining',                            'KDD',     true ]
   - [ 'Association for Computational Linguistics',                      'ACL',     true ]
   - [ 'Empirical Methods in Natural Language Processing',               'EMNLP',   true ]
   - [ 'Nature Neuroscience',                        'Nat Neurosci',     false ]

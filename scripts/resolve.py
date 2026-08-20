@@ -61,6 +61,41 @@ def from_arxiv(title):
 PREFERRED_TYPES = ("proceedings-article", "journal-article", "book-chapter")
 
 
+ACCEPTED = re.compile(r"\b(accepted|to appear|camera[- ]ready|published in|in proceedings|presented at)\b", re.I)
+VENUE_TOKEN = re.compile(
+    r"\b(CVPR|ICCV|ECCV|WACV|NeurIPS|NIPS|ICLR|ICML|AAAI|IJCAI|KDD|ACL|EMNLP|NAACL|COLING|"
+    r"ACM MM|MICCAI|ISBI|EMBC|INTERSPEECH|ICASSP|TPAMI|TIP|TMI|TNNLS|TMLR|JMLR|JNE|NeuroImage)\b", re.I)
+
+
+def from_arxiv_comment(arxiv_id):
+    """Read the venue out of the arXiv comment field.
+
+    Authors routinely write "Accepted to KDD 2026" there months before DBLP or Crossref
+    index the paper. A 2026-08-20 measurement found DBLP could verify 0 of 26 candidates
+    from 2026 -- not because they were unpublished, but because indexing lags 6-18 months.
+    The comment field is the only machine-readable venue signal in that gap.
+    """
+    q = urllib.parse.urlencode({"id_list": arxiv_id, "max_results": 1})
+    try:
+        body = get(f"http://export.arxiv.org/api/query?{q}")
+    except Exception:
+        return None
+    m = re.search(r"<arxiv:comment[^>]*>(.*?)</arxiv:comment>", body, re.S)
+    if not m:
+        return None
+    comment = " ".join(m.group(1).split())
+    if not ACCEPTED.search(comment):
+        return None
+    v = VENUE_TOKEN.search(comment)
+    if not v:
+        return {"status": "accepted", "venue_comment": comment[:120]}
+    year = re.search(r"\b(20[0-9]{2})\b", comment)
+    short = v.group(1).upper().replace("NIPS", "NeurIPS")
+    return {"status": "accepted",
+            "venue_short": f"{short} {year.group(1)}" if year else short,
+            "venue_comment": comment[:120]}
+
+
 def from_crossref(title):
     """Crossref title search -> DOI + published venue, preferring the version of record."""
     q = urllib.parse.urlencode({"query.bibliographic": title, "rows": 8,
@@ -130,6 +165,14 @@ def main():
                 found.setdefault("venue", s.get("venue"))
             time.sleep(1.5)
 
+        # A version-of-record DOI already settles the venue; only ask the comment field
+        # when Crossref came up empty, which is the norm for anything under a year old.
+        if found.get("arxiv") and not found.get("doi"):
+            aid = found["arxiv"].rsplit("/", 1)[-1]
+            c = from_arxiv_comment(aid)
+            if c:
+                found.update(c)
+            time.sleep(0.8)
         if found.get("arxiv") and not found.get("paper"):
             found["paper"] = found["arxiv"]
         if found.get("paper"):

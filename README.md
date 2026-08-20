@@ -34,6 +34,7 @@ Coverage: fMRI 33 · EEG 13 · MEG 5
 | [Pitfalls](docs/pitfalls.md) | the confounds that make published numbers incomparable, with a test for each |
 | [Benchmarks](docs/benchmarks.md) | metrics, reported only with split, pool size and data budget attached |
 | [Reproducibility](docs/reproducibility.md) | which released code has actually been run by someone |
+| [Published only](docs/published-only.md) | the same list restricted to work with a version of record |
 
 ---
 
@@ -50,16 +51,16 @@ Coverage: fMRI 33 · EEG 13 · MEG 5
 |---|---|---|---|---|---|
 | 2026 | <mark>[Duala: Dual-Level Alignment of Subjects and Stimuli for Cross-Subject fMRI Decoding](https://arxiv.org/abs/2603.07625v1)</mark>  | fMRI | CVPR 2026 | Natural Scenes Dataset | [code](https://github.com/ShumengLI/Duala) |
 | 2026 | <mark>[MindAdapter: Few-Shot Parameter-Efficient Residual Calibration of Cross-Subject Brain-to-Visual Decoding Models](https://doi.org/10.1145/3770855.3818949)</mark>  | fMRI | KDD 2026 | Natural Scenes Dataset | — |
-| 2025 | [MindAligner: Explicit Brain Functional Alignment for Cross-Subject Visual Decoding from Limited fMRI Data](https://arxiv.org/abs/2502.05034v1)  | fMRI | — | Natural Scenes Dataset | [code](https://github.com/Da1yuqin/MindAligner) |
-| 2024 | [Brain decoding: toward real-time reconstruction of visual perception](https://arxiv.org/abs/2310.19812v3)  | MEG | — | THINGS-MEG | — |
+| 2025 | [MindAligner: Explicit Brain Functional Alignment for Cross-Subject Visual Decoding from Limited fMRI Data](https://arxiv.org/abs/2502.05034v1) 📄  | fMRI | — | Natural Scenes Dataset | [code](https://github.com/Da1yuqin/MindAligner) |
+| 2024 | [Brain decoding: toward real-time reconstruction of visual perception](https://arxiv.org/abs/2310.19812v3) 📄  | MEG | — | THINGS-MEG | — |
 | 2024 | [DREAM: Visual Decoding from Reversing Human Visual System](https://doi.org/10.1109/wacv57701.2024.00804)  | fMRI | WACV 2024 | Natural Scenes Dataset | [code](https://github.com/weihaox/DREAM) |
 | 2024 | [MindBridge: A Cross-Subject Brain Decoding Framework](https://doi.org/10.1109/cvpr52733.2024.01077)  | fMRI | CVPR 2024 | Natural Scenes Dataset | [code](https://github.com/littlepure2333/MindBridge) |
-| 2024 | [MindEye2: Shared-Subject Models Enable fMRI-To-Image With 1 Hour of Data](https://arxiv.org/abs/2403.11207v2)  | fMRI | — | Natural Scenes Dataset | [code](https://github.com/MedARC-AI/MindEyeV2) |
+| 2024 | [MindEye2: Shared-Subject Models Enable fMRI-To-Image With 1 Hour of Data](https://arxiv.org/abs/2403.11207v2) 📄  | fMRI | — | Natural Scenes Dataset | [code](https://github.com/MedARC-AI/MindEyeV2) |
 | 2024 | [NeuroPictor: Refining fMRI-to-Image Reconstruction via Multi-individual Pretraining and Multi-level Modulation](https://doi.org/10.1007/978-3-031-72983-6_4)  | fMRI | ECCV 2024 | Natural Scenes Dataset | — |
 | 2024 | [UMBRAE: Unified Multimodal Brain Decoding](https://doi.org/10.1007/978-3-031-72667-5_14)  | fMRI | ECCV 2024 | Natural Scenes Dataset | [code](https://github.com/weihaox/UMBRAE) |
-| 2024 | [UniBrain: Unify Image Reconstruction and Captioning All in One Diffusion Model from Human Brain Activity](https://arxiv.org/abs/2308.07428v1)  | fMRI | — | Natural Scenes Dataset | — |
+| 2024 | [UniBrain: Unify Image Reconstruction and Captioning All in One Diffusion Model from Human Brain Activity](https://arxiv.org/abs/2308.07428v1) 📄  | fMRI | — | Natural Scenes Dataset | — |
 | 2024 | [Visual Decoding and Reconstruction via EEG Embeddings with Guided Diffusion](https://doi.org/10.52202/079017-3266)  | EEG | NeurIPS 2024 | THINGS-EEG2 | [code](https://github.com/dongyangli-del/EEG_Image_decode) |
-| 2023 | [DreamDiffusion: Generating High-Quality Images from Brain EEG Signals](https://arxiv.org/abs/2306.16934v2)  | EEG | — | — | [code](https://github.com/bbaaii/DreamDiffusion) |
+| 2023 | [DreamDiffusion: Generating High-Quality Images from Brain EEG Signals](https://arxiv.org/abs/2306.16934v2) 📄  | EEG | — | — | [code](https://github.com/bbaaii/DreamDiffusion) |
 | 2023 | [High-resolution image reconstruction with latent diffusion models from human brain activity](https://doi.org/10.1109/cvpr52729.2023.01389)  | fMRI | CVPR 2023 | Natural Scenes Dataset | — |
 | 2023 | [MindDiffuser: Controlled Image Reconstruction from Human Brain Activity with Semantic and Structural Diffusion](https://doi.org/10.1145/3581783.3613832)  | fMRI | ACM MM 2023 | Natural Scenes Dataset | — |
 | 2023 | [Natural scene reconstruction from fMRI signals using generative latent diffusion](https://doi.org/10.1038/s41598-023-42891-8)  | fMRI | Sci Rep | Natural Scenes Dataset | [code](https://github.com/ozcelikfu/brain-diffuser) |
@@ -68,7 +69,7 @@ Coverage: fMRI 33 · EEG 13 · MEG 5
 | 2022 | [Mind Reader: Reconstructing complex images from brain activities](https://doi.org/10.52202/068431-2148)  | fMRI | NeurIPS 2022 | Natural Scenes Dataset | — |
 | 2022 | [Self-supervised natural image reconstruction and large-scale semantic classification from brain activity](https://doi.org/10.1016/j.neuroimage.2022.119121)  | fMRI | NeuroImage | Generic Object Decoding | — |
 | 2019 | [Deep image reconstruction from human brain activity](https://doi.org/10.1371/journal.pcbi.1006633)  | fMRI | PLoS Comput Biol | Deep Image Reconstruction | [code](https://github.com/KamitaniLab/DeepImageReconstruction) |
-| 2019 | [From voxels to pixels and back: Self-supervision in natural-image reconstruction from fMRI](https://arxiv.org/abs/1907.02431v1)  | fMRI | — | Generic Object Decoding | — |
+| 2019 | [From voxels to pixels and back: Self-supervision in natural-image reconstruction from fMRI](https://arxiv.org/abs/1907.02431v1) 📄  | fMRI | — | Generic Object Decoding | — |
 
 ### Video reconstruction  <sub>(3)</sub>
 
@@ -84,8 +85,8 @@ Coverage: fMRI 33 · EEG 13 · MEG 5
 |---|---|---|---|---|---|
 | 2026 | <mark>[Duala: Dual-Level Alignment of Subjects and Stimuli for Cross-Subject fMRI Decoding](https://arxiv.org/abs/2603.07625v1)</mark>  | fMRI | CVPR 2026 | Natural Scenes Dataset | [code](https://github.com/ShumengLI/Duala) |
 | 2026 | <mark>[MindAdapter: Few-Shot Parameter-Efficient Residual Calibration of Cross-Subject Brain-to-Visual Decoding Models](https://doi.org/10.1145/3770855.3818949)</mark>  | fMRI | KDD 2026 | Natural Scenes Dataset | — |
-| 2024 | [Brain decoding: toward real-time reconstruction of visual perception](https://arxiv.org/abs/2310.19812v3)  | MEG | — | THINGS-MEG | — |
-| 2024 | [Decoding Natural Images from EEG for Object Recognition](https://arxiv.org/abs/2308.13234v3)  | EEG | — | THINGS-EEG2 | — |
+| 2024 | [Brain decoding: toward real-time reconstruction of visual perception](https://arxiv.org/abs/2310.19812v3) 📄  | MEG | — | THINGS-MEG | — |
+| 2024 | [Decoding Natural Images from EEG for Object Recognition](https://arxiv.org/abs/2308.13234v3) 📄  | EEG | — | THINGS-EEG2 | — |
 | 2024 | [Lite-Mind: Towards Efficient and Robust Brain Representation Learning](https://doi.org/10.1145/3664647.3681229)  | fMRI | ACM MM 2024 | Natural Scenes Dataset | [code](https://github.com/gongzix/Lite-Mind) |
 | 2024 | [Visual Decoding and Reconstruction via EEG Embeddings with Guided Diffusion](https://doi.org/10.52202/079017-3266)  | EEG | NeurIPS 2024 | THINGS-EEG2 | [code](https://github.com/dongyangli-del/EEG_Image_decode) |
 | 2023 | [Reconstructing the Mind's Eye: fMRI-to-Image with Contrastive Learning and Diffusion Priors](https://doi.org/10.52202/075280-1073)  | fMRI | NeurIPS 2023 | Natural Scenes Dataset | [code](https://github.com/MedARC-AI/fMRI-reconstruction-NSD) |
@@ -94,10 +95,10 @@ Coverage: fMRI 33 · EEG 13 · MEG 5
 
 | Year | Paper | Modality | Venue | Data | Code |
 |---|---|---|---|---|---|
-| 2025 | [Learning Interpretable Representations Leads to Semantically Faithful EEG-to-Text Generation](https://arxiv.org/abs/2505.17099v1)  | fMRI | — | — | [code](https://github.com/justin-xzliu/GLIM) |
+| 2025 | [Learning Interpretable Representations Leads to Semantically Faithful EEG-to-Text Generation](https://arxiv.org/abs/2505.17099v1) 📄  | fMRI | — | — | [code](https://github.com/justin-xzliu/GLIM) |
 | 2024 | [UMBRAE: Unified Multimodal Brain Decoding](https://doi.org/10.1007/978-3-031-72667-5_14)  | fMRI | ECCV 2024 | Natural Scenes Dataset | [code](https://github.com/weihaox/UMBRAE) |
-| 2024 | [UniBrain: Unify Image Reconstruction and Captioning All in One Diffusion Model from Human Brain Activity](https://arxiv.org/abs/2308.07428v1)  | fMRI | — | Natural Scenes Dataset | — |
-| 2023 | [Brain Captioning: Decoding human brain activity into images and text](https://arxiv.org/abs/2305.11560v1)  | fMRI | — | Natural Scenes Dataset | — |
+| 2024 | [UniBrain: Unify Image Reconstruction and Captioning All in One Diffusion Model from Human Brain Activity](https://arxiv.org/abs/2308.07428v1) 📄  | fMRI | — | Natural Scenes Dataset | — |
+| 2023 | [Brain Captioning: Decoding human brain activity into images and text](https://arxiv.org/abs/2305.11560v1) 📄  | fMRI | — | Natural Scenes Dataset | — |
 
 ### Continuous language reconstruction  <sub>(3)</sub>
 
@@ -117,7 +118,7 @@ Coverage: fMRI 33 · EEG 13 · MEG 5
 
 | Year | Paper | Modality | Venue | Data | Code |
 |---|---|---|---|---|---|
-| 2025 | [Brain-to-Text Decoding: A Non-invasive Approach via Typing](https://arxiv.org/abs/2502.17480v1)  | MEG/EEG | — | — | [code](https://github.com/facebookresearch/brain2qwerty) |
+| 2025 | [Brain-to-Text Decoding: A Non-invasive Approach via Typing](https://arxiv.org/abs/2502.17480v1) 📄  | MEG/EEG | — | — | [code](https://github.com/facebookresearch/brain2qwerty) |
 | 2023 | [DeWave: Discrete Encoding of EEG Waves for EEG to Text Translation](https://doi.org/10.52202/075280-0432) `teacher-forcing` | EEG | NeurIPS 2023 | ZuCo 1.0 / 2.0 | — |
 | 2022 | [Open Vocabulary Electroencephalography-To-Text Decoding and Zero-shot Sentiment Classification](https://doi.org/10.1609/aaai.v36i5.20472) `teacher-forcing` | EEG | AAAI 2022 | ZuCo 1.0 / 2.0 | — |
 
@@ -155,9 +156,22 @@ Coverage: fMRI 33 · EEG 13 · MEG 5
 | Mark | Meaning |
 |---|---|
 | ⚠️ next to a title | link not yet resolved by `scripts/resolve.py` |
+| ⏳ next to a title | accepted at a venue, not yet indexed anywhere |
+| 📄 next to a title | preprint with no version of record |
 | `` `block-design` `` and similar | this paper's evaluation is subject to a documented pitfall — see [pitfalls.md](docs/pitfalls.md) |
 | ⛔️ next to a dataset | known to be unsuitable for new work; kept for historical reference |
 | ✅ / ⚠️ in Verified | whether a human has checked these numbers against the source |
+
+## Preprints
+
+Preprints stay in. On a 60-paper sample of the candidate pool, 100% of 2023 entries could
+be verified as published against 8% of 2026 entries -- publication lag in this field runs
+9 to 18 months, so a published-only rule removes the newest work, not the weakest. It also
+removes true positives: Duala is a CVPR 2026 paper that neither Crossref nor DBLP had
+indexed when this list first added it.
+
+Status is therefore a derived field and a [separate view](docs/published-only.md), never a
+filter on what the list may contain.
 
 ## Scope
 

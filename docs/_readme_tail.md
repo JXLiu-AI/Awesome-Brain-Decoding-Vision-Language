@@ -3,9 +3,22 @@
 | Mark | Meaning |
 |---|---|
 | ⚠️ next to a title | link not yet resolved by `scripts/resolve.py` |
+| ⏳ next to a title | accepted at a venue, not yet indexed anywhere |
+| 📄 next to a title | preprint with no version of record |
 | `` `block-design` `` and similar | this paper's evaluation is subject to a documented pitfall — see [pitfalls.md](docs/pitfalls.md) |
 | ⛔️ next to a dataset | known to be unsuitable for new work; kept for historical reference |
 | ✅ / ⚠️ in Verified | whether a human has checked these numbers against the source |
+
+## Preprints
+
+Preprints stay in. On a 60-paper sample of the candidate pool, 100% of 2023 entries could
+be verified as published against 8% of 2026 entries -- publication lag in this field runs
+9 to 18 months, so a published-only rule removes the newest work, not the weakest. It also
+removes true positives: Duala is a CVPR 2026 paper that neither Crossref nor DBLP had
+indexed when this list first added it.
+
+Status is therefore a derived field and a [separate view](docs/published-only.md), never a
+filter on what the list may contain.
 
 ## Scope
 
