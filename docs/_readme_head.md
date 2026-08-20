@@ -1,8 +1,8 @@
 # Awesome Brain Decoding: Vision & Language
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[![Build](https://github.com/OWNER/Awesome-Brain-Decoding-Vision-Language/actions/workflows/build.yml/badge.svg)](../../actions/workflows/build.yml)
-[![Last commit](https://img.shields.io/github/last-commit/OWNER/Awesome-Brain-Decoding-Vision-Language)](../../commits/main)
+[![Build](https://github.com/JXLiu-AI/Awesome-Brain-Decoding-Vision-Language/actions/workflows/build.yml/badge.svg)](../../actions/workflows/build.yml)
+[![Last commit](https://img.shields.io/github/last-commit/JXLiu-AI/Awesome-Brain-Decoding-Vision-Language)](../../commits/main)
 
 Decoding **what a person is seeing and what a person is hearing or reading** from
 **non-invasive** brain recordings — fMRI, EEG and MEG.
