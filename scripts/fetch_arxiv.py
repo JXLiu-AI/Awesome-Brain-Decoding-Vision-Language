@@ -72,8 +72,14 @@ def main():
             hits += 1
             if e["url"] in seen or norm(e["title"]) in known:
                 continue
-            if not any(re.search(p, e["title"] + " " + e["summary"], re.I) for p in CFG["must_match"]):
-                continue
+            blob = e["title"] + " " + e["summary"]
+            # strong_signal states what the paper does; must_not_match is only a heuristic,
+            # so an unambiguous task phrase overrides every exclusion rule.
+            if not any(re.search(p, blob, re.I) for p in CFG.get("strong_signal", [])):
+                if any(re.search(p, blob, re.I) for p in CFG.get("must_not_match", [])):
+                    continue
+                if not any(re.search(p, blob, re.I) for p in CFG["must_match"]):
+                    continue
             found[e["url"]] = e
         time.sleep(3)
 

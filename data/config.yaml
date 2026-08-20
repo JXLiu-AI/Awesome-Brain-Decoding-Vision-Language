@@ -34,8 +34,36 @@ arxiv_queries:
 # dragging in motor imagery, seizure detection and emotion recognition.
 must_match:
   - '\b(fMRI|EEG|MEG|magnetoencephalograph|electroencephalograph|neuroimag|BOLD signal|brain activity|brain recording)'
+# Measured 2026-08-20 on a 40-paper random sample of the arXiv pool: precision was 58%.
+# These patterns target the false positives that sample exposed. The single best example:
+# "MEG II" is a particle-physics experiment (Mu to E Gamma) and has nothing to do with
+# magnetoencephalography, yet it matches every keyword filter built for this field.
 must_not_match:
+  # adjacent clinical and network-analysis literature
   - '\b(motor imagery|seizure|epilep|sleep stag|emotion recognition|driver drowsi|schizophren|Alzheimer|depression detect)'
+  - '\b(functional connectivity|brain network|connectome|graph learning)\b'
+  - '\b(tumou?r|lesion|segmentation|diagnos\w*|disorder|clinical report)\b'
+  # reconstruction OF THE SCAN, not of the stimulus -- the keyword trap of this field
+  - '\b(GRAPPA|parallel imaging|slice-to-volume|k-space|image acceleration|super-resolution MRI|motion correction)\b'
+  - '\bMRI (reconstruction|acceleration|quantification)\b'
+  # metaphorical uses of "brain" with no brain data anywhere
+  - '\bbrain[- ]inspired\b'
+  # MEG II is Mu to E Gamma, a particle physics experiment
+  - '\bMEG\s?(II|-II)\b|positron|muon|calorimeter'
+  # non-human or invasive recordings
+  - '\b(light-?sheet|two-photon|calcium imaging|electrocorticograph|ECoG|Utah array|intracranial)\b'
+
+# An exclusion pattern can be wrong. On the same 40-paper sample, the 'brain-inspired' rule
+# correctly killed a metaphorical-brain paper and also killed NeuroCLIP, which really is
+# EEG-to-image decoding and merely says "Brain-Inspired" in its title. A hit on any of these
+# unambiguous task phrases overrides every must_not_match rule -- exclusions are heuristics,
+# these are statements of what the paper does.
+strong_signal:
+  - '\b(EEG|MEG|fMRI)[- ]to[- ](image|text|video|speech|audio)\b'
+  - '\b(brain|neural)[- ]to[- ](image|text|video|speech)\b'
+  - '\b(visual|semantic|language|speech) (decoding|reconstruction) (from|of) (brain|fMRI|EEG|MEG|neural)'
+  - '\b(decod\w+|reconstruct\w+) .{0,30}(from|using) (brain activity|brain recordings|fMRI|EEG signals|MEG)'
+  - '\bcross-subject (brain|visual|fMRI|EEG) decoding\b'
 
 # ---------------------------------------------------------------- coverage blind spots
 # Measured 2026-08-20 against the 45 hand-curated seed entries: 12 of them (27%) have no

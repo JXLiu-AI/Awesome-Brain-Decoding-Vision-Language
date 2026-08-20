@@ -2,9 +2,10 @@
 # Changelog
 
 Releases are cut by `scripts/release.py`, which appends to `releases:` in
-## Unreleased  <sub>(1 entries)</sub>
+## Unreleased  <sub>(2 entries)</sub>
 
 - Duala: Dual-Level Alignment of Subjects and Stimuli for Cross-Subject fMRI Decoding
+- MindAdapter: Few-Shot Parameter-Efficient Residual Calibration of Cross-Subject Brain-to-Visual Decoding Models
 
 `data/config.yaml`. Everything added after the newest release date is rendered
 as new in the README until the next release rolls the window forward.

@@ -25,8 +25,8 @@ sizes, on different amounts of per-subject data. This one is built around that p
 New arXiv preprints are swept daily and land in a review queue rather than straight into
 the list — see [Automation](#automation).
 
-**46 papers · 18 datasets · 5 documented evaluation pitfalls**  
-Coverage: fMRI 32 · EEG 13 · MEG 5
+**47 papers · 18 datasets · 5 documented evaluation pitfalls**  
+Coverage: fMRI 33 · EEG 13 · MEG 5
 
 | | |
 |---|---|
@@ -38,17 +38,18 @@ Coverage: fMRI 32 · EEG 13 · MEG 5
 ---
 
 > [!NOTE]
-> **1 new entry since v0.1** (2026-08-20), highlighted in the tables below. Full history in [CHANGELOG.md](CHANGELOG.md).
+> **2 new entries since v0.1** (2026-08-20), highlighted in the tables below. Full history in [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
 ## Papers
 
-### Image reconstruction  <sub>(20)</sub>
+### Image reconstruction  <sub>(21)</sub>
 
 | Year | Paper | Modality | Venue | Data | Code |
 |---|---|---|---|---|---|
 | 2026 | <mark>[Duala: Dual-Level Alignment of Subjects and Stimuli for Cross-Subject fMRI Decoding](https://arxiv.org/abs/2603.07625v1)</mark>  | fMRI | CVPR 2026 | Natural Scenes Dataset | [code](https://github.com/ShumengLI/Duala) |
+| 2026 | <mark>[MindAdapter: Few-Shot Parameter-Efficient Residual Calibration of Cross-Subject Brain-to-Visual Decoding Models](https://doi.org/10.1145/3770855.3818949)</mark>  | fMRI | KDD 2026 | Natural Scenes Dataset | — |
 | 2025 | [MindAligner: Explicit Brain Functional Alignment for Cross-Subject Visual Decoding from Limited fMRI Data](https://arxiv.org/abs/2502.05034v1)  | fMRI | — | Natural Scenes Dataset | [code](https://github.com/Da1yuqin/MindAligner) |
 | 2024 | [Brain decoding: toward real-time reconstruction of visual perception](https://arxiv.org/abs/2310.19812v3)  | MEG | — | THINGS-MEG | — |
 | 2024 | [DREAM: Visual Decoding from Reversing Human Visual System](https://doi.org/10.1109/wacv57701.2024.00804)  | fMRI | WACV 2024 | Natural Scenes Dataset | [code](https://github.com/weihaox/DREAM) |
@@ -77,11 +78,12 @@ Coverage: fMRI 32 · EEG 13 · MEG 5
 | 2023 | [Cinematic Mindscapes: High-quality Video Reconstruction from Brain Activity](https://doi.org/10.52202/075280-1079)  | fMRI | NeurIPS 2023 | — | [code](https://github.com/jqin4749/MindVideo) |
 | 2018 | [Neural Encoding and Decoding with Deep Learning for Dynamic Natural Vision](https://doi.org/10.1093/cercor/bhx268)  | fMRI | Cerebral Cortex | — | — |
 
-### Image retrieval / identification  <sub>(6)</sub>
+### Image retrieval / identification  <sub>(7)</sub>
 
 | Year | Paper | Modality | Venue | Data | Code |
 |---|---|---|---|---|---|
 | 2026 | <mark>[Duala: Dual-Level Alignment of Subjects and Stimuli for Cross-Subject fMRI Decoding](https://arxiv.org/abs/2603.07625v1)</mark>  | fMRI | CVPR 2026 | Natural Scenes Dataset | [code](https://github.com/ShumengLI/Duala) |
+| 2026 | <mark>[MindAdapter: Few-Shot Parameter-Efficient Residual Calibration of Cross-Subject Brain-to-Visual Decoding Models](https://doi.org/10.1145/3770855.3818949)</mark>  | fMRI | KDD 2026 | Natural Scenes Dataset | — |
 | 2024 | [Brain decoding: toward real-time reconstruction of visual perception](https://arxiv.org/abs/2310.19812v3)  | MEG | — | THINGS-MEG | — |
 | 2024 | [Decoding Natural Images from EEG for Object Recognition](https://arxiv.org/abs/2308.13234v3)  | EEG | — | THINGS-EEG2 | — |
 | 2024 | [Lite-Mind: Towards Efficient and Robust Brain Representation Learning](https://doi.org/10.1145/3664647.3681229)  | fMRI | ACM MM 2024 | Natural Scenes Dataset | [code](https://github.com/gongzix/Lite-Mind) |
