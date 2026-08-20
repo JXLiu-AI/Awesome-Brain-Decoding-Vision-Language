@@ -2,12 +2,16 @@
 # Changelog
 
 Releases are cut by `scripts/release.py`, which appends to `releases:` in
+## Unreleased  <sub>(1 entries)</sub>
+
+- Duala: Dual-Level Alignment of Subjects and Stimuli for Cross-Subject fMRI Decoding
+
 `data/config.yaml`. Everything added after the newest release date is rendered
 as new in the README until the next release rolls the window forward.
 
-## v0.1 — 2026-08-20
+## v0.1 — 2026-08-20T10:33
 
-_initial list_
+_initial list, 45 entries_
 
 45 entries added.
 

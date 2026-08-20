@@ -705,3 +705,19 @@
   resolved: true
   match_score: 1.0
   added: '2026-08-20'
+- key: li2026duala
+  title: 'Duala: Dual-Level Alignment of Subjects and Stimuli for Cross-Subject fMRI Decoding'
+  year: 2026
+  modality:
+  - fMRI
+  task:
+  - image-recon
+  - image-retrieval
+  datasets:
+  - nsd
+  code: https://github.com/ShumengLI/Duala
+  added: 2026-08-20T14:00
+  arxiv: https://arxiv.org/abs/2603.07625v1
+  paper: https://arxiv.org/abs/2603.07625v1
+  resolved: true
+  match_score: 1.0

@@ -77,6 +77,9 @@ highlight:
   new_label: new
 
 releases:
+  # `date` may carry an optional time (YYYY-MM-DDTHH:MM) so that a batch landing on the
+  # same calendar day as a release still registers as new. Plain dates sort before any
+  # timestamped value on the same day, which is the wanted behaviour.
   - version: v0.1
-    date: 2026-08-20
-    note: initial list
+    date: 2026-08-20T10:33
+    note: initial list, 45 entries

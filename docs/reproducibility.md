@@ -7,6 +7,7 @@ says so in the PR. Everything else is `claimed` or `none`.
 | Paper | Code | Weights | Status | Notes |
 |---|---|---|---|---|
 | Multigranular Evaluation for Brain Visual Decoding | [repo](https://github.com/weihaox/BASIC) | — | `claimed` |  |
+| Duala: Dual-Level Alignment of Subjects and Stimuli for Cros | [repo](https://github.com/ShumengLI/Duala) | — | `claimed` |  |
 | MindAligner: Explicit Brain Functional Alignment for Cross-S | [repo](https://github.com/Da1yuqin/MindAligner) | — | `claimed` |  |
 | Learning Interpretable Representations Leads to Semantically | [repo](https://github.com/justin-xzliu/GLIM) | — | `claimed` |  |
 | Brain-to-Text Decoding: A Non-invasive Approach via Typing | [repo](https://github.com/facebookresearch/brain2qwerty) | — | `claimed` |  |
