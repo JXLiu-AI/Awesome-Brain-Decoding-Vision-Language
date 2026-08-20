@@ -32,6 +32,12 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          # gh issue create fails outright on a label that does not exist yet, which would
+          # break the very first scheduled run. Create it idempotently first.
+          gh label create candidate \
+            --color FFD1DC \
+            --description "Swept from arXiv, awaiting a human decision" \
+            --force
           gh issue create \
             --title "arXiv candidates $(date -u +%Y-%m-%d)" \
             --label "candidate" \
