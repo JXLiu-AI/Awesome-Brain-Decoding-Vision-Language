@@ -74,9 +74,14 @@ Good lists exist for those and are linked from the README.
 ## Marking what changed between updates
 
 Every paper carries an `added:` date. `data/config.yaml` holds a `releases:` list, and
-anything added after the newest release date renders as new: a **What's new** table at the
-top of the README, plus an in-place highlight on the same rows further down, so you can see
-where each addition lands rather than only that it exists.
+anything added after the newest release date renders as new: a one-line banner at the top
+of the README saying how many and since when, plus an in-place highlight on the rows
+themselves, so you can see where each addition lands rather than only that it exists.
+
+The banner deliberately does not list the new entries. An earlier version did, and it meant
+every new paper appeared twice on the same page -- once in a summary table and once
+highlighted below it. The highlight already answers "which ones"; the banner only needs to
+answer "how many, since when".
 
 ```bash
 python scripts/release.py v0.2 --note "first bulk import"   # roll the window forward

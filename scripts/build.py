@@ -185,20 +185,23 @@ def benchmarks_doc(papers, ds_by_id):
 
 
 def whats_new_section(papers, ds_by_id):
-    fresh = sorted([p for p in papers if is_new(p)], key=lambda p: (str(p.get("added")), p["title"]), reverse=True)
+    """A one-line banner, not a second copy of the rows.
+
+    An earlier version rendered a full table of the new entries above the main tables.
+    That duplicated every row: the same paper appeared twice on one page, once in the
+    summary and once highlighted in place. The highlight already answers "which are new";
+    the banner only needs to answer "how many, and since when".
+    """
+    fresh = [p for p in papers if is_new(p)]
     if not fresh:
         return ""
     last = RELEASES[-1] if RELEASES else {}
-    out = [f"## What's new since {last.get('version', 'the last release')} ({LAST_RELEASE})  <sub>({len(fresh)})</sub>",
-           "",
-           "Highlighted rows below are the same entries, marked in place so you can see where",
-           "each one lands rather than only that it exists.",
-           "",
-           "| Added | Paper | Modality | Venue | Data | Code |", "|---|---|---|---|---|---|"]
-    for p in fresh:
-        row = paper_row(p, ds_by_id).split("|")
-        out.append("| " + str(p.get("added")) + " |" + "|".join(row[2:]))
-    return "\n".join(out) + "\n\n---\n"
+    day = LAST_RELEASE.split("T")[0]
+    n = len(fresh)
+    return (f"> [!NOTE]\n"
+            f"> **{n} new {'entry' if n == 1 else 'entries'} since {last.get('version', 'the last release')}** "
+            f"({day}), highlighted in the tables below. "
+            f"Full history in [CHANGELOG.md](CHANGELOG.md).\n\n---\n")
 
 
 def changelog(papers):

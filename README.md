@@ -37,14 +37,8 @@ Coverage: fMRI 32 · EEG 13 · MEG 5
 
 ---
 
-## What's new since v0.1 (2026-08-20T10:33)  <sub>(1)</sub>
-
-Highlighted rows below are the same entries, marked in place so you can see where
-each one lands rather than only that it exists.
-
-| Added | Paper | Modality | Venue | Data | Code |
-|---|---|---|---|---|---|
-| 2026-08-20T14:00 | <mark>[Duala: Dual-Level Alignment of Subjects and Stimuli for Cross-Subject fMRI Decoding](https://arxiv.org/abs/2603.07625v1)</mark>  | fMRI | — | Natural Scenes Dataset | [code](https://github.com/ShumengLI/Duala) |
+> [!NOTE]
+> **1 new entry since v0.1** (2026-08-20), highlighted in the tables below. Full history in [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
