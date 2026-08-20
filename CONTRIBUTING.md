@@ -70,3 +70,28 @@ default for any repo with released code that nobody here has run.
 
 Invasive BCI, motor imagery, P300 spellers, seizure and sleep staging, emotion recognition.
 Good lists exist for those and are linked from the README.
+
+## Marking what changed between updates
+
+Every paper carries an `added:` date. `data/config.yaml` holds a `releases:` list, and
+anything added after the newest release date renders as new: a **What's new** table at the
+top of the README, plus an in-place highlight on the same rows further down, so you can see
+where each addition lands rather than only that it exists.
+
+```bash
+python scripts/release.py v0.2 --note "first bulk import"   # roll the window forward
+python scripts/build.py
+```
+
+`highlight.style` in `data/config.yaml` picks how the in-place mark is drawn:
+
+| Style | What you get | Trade-off |
+|---|---|---|
+| `mark` (default) | `<mark>` — a real background highlight | GitHub's theme picks the colour (light yellow); CSS is stripped from READMEs so it cannot be set to pink |
+| `badge` | a light-pink shields.io pill in the Year column | exact colour, but a badge beside the row rather than a background behind it |
+| `both` | both | noisier |
+| `none` | nothing | the What's new table still appears |
+
+**Open question:** a genuine pink row background needs real CSS, which means publishing a
+GitHub Pages build alongside the README. Worth doing once the list is large enough that
+readers scroll rather than search.

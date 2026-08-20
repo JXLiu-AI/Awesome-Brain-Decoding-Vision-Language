@@ -30,3 +30,27 @@ must_match:
   - '\b(fMRI|EEG|MEG|magnetoencephalograph|electroencephalograph|neuroimag)'
 must_not_match:
   - '\b(motor imagery|seizure|epilep|sleep stag|emotion recognition|driver drowsi)'
+
+# ---------------------------------------------------------------- change highlighting
+# Entries whose `added:` date is newer than the most recent release below are rendered as
+# new, so a returning reader can see the delta without diffing.
+#
+# GitHub strips CSS from README.md, so a literal "light pink row background" is not
+# possible there. The options are:
+#   mark   <mark> tags -- a real background highlight, colour chosen by the GitHub theme
+#          (light yellow), works in both light and dark mode. Closest thing available.
+#   badge  a light-pink shields.io pill in the Year column. Exact colour control, but it
+#          is a badge next to the row, not a background behind it.
+#   both   belt and braces
+#   none
+# A literal pink row background needs real CSS, which means a GitHub Pages build rather
+# than README.md. Not built yet -- see the open question in CONTRIBUTING.md.
+highlight:
+  style: mark
+  badge_color: FFD1DC     # light pink, used when style is badge/both
+  new_label: new
+
+releases:
+  - version: v0.1
+    date: 2026-08-20
+    note: initial list

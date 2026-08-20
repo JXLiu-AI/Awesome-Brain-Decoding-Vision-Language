@@ -14,6 +14,7 @@
   venue: Nature Communications
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: shen2019
   title: Deep image reconstruction from human brain activity
   year: 2019
@@ -29,6 +30,7 @@
   resolved: true
   match_score: 1.0
   venue: PLOS Computational Biology
+  added: '2026-08-20'
 - key: beliy2019
   title: 'From voxels to pixels and back: Self-supervision in natural-image reconstruction from fMRI'
   year: 2019
@@ -42,6 +44,7 @@
   paper: https://arxiv.org/abs/1907.02431v1
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: gaziv2022
   title: Self-supervised natural image reconstruction and large-scale semantic classification from brain activity
   year: 2022
@@ -56,6 +59,7 @@
   resolved: true
   match_score: 1.0
   venue: NeuroImage
+  added: '2026-08-20'
 - key: lin2022mindreader
   title: 'Mind Reader: Reconstructing complex images from brain activities'
   year: 2022
@@ -71,6 +75,7 @@
   venue: Advances in Neural Information Processing Systems 35
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: chen2023mindvis
   title: 'Seeing Beyond the Brain: Conditional Diffusion Model with Sparse Masked Modeling for Vision Decoding'
   year: 2023
@@ -88,6 +93,7 @@
   venue: 2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: takagi2023
   title: High-resolution image reconstruction with latent diffusion models from human brain activity
   year: 2023
@@ -102,6 +108,7 @@
   resolved: true
   match_score: 1.0
   venue: 2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
+  added: '2026-08-20'
 - key: ozcelik2023
   title: Natural scene reconstruction from fMRI signals using generative latent diffusion
   year: 2023
@@ -118,6 +125,7 @@
   venue: Scientific Reports
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: scotti2023mindeye
   title: 'Reconstructing the Mind''s Eye: fMRI-to-Image with Contrastive Learning and Diffusion Priors'
   year: 2023
@@ -135,6 +143,7 @@
   venue: Advances in Neural Information Processing Systems 36
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: scotti2024mindeye2
   title: 'MindEye2: Shared-Subject Models Enable fMRI-To-Image With 1 Hour of Data'
   year: 2024
@@ -149,6 +158,7 @@
   paper: https://arxiv.org/abs/2403.11207v2
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: wang2023minddiffuser
   title: 'MindDiffuser: Controlled Image Reconstruction from Human Brain Activity with Semantic and Structural Diffusion'
   year: 2023
@@ -164,6 +174,7 @@
   venue: Proceedings of the 31st ACM International Conference on Multimedia
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: xia2024dream
   title: 'DREAM: Visual Decoding from Reversing Human Visual System'
   year: 2024
@@ -180,6 +191,7 @@
   match_score: 1.0
   doi: 10.1109/wacv57701.2024.00804
   venue: 2024 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)
+  added: '2026-08-20'
 - key: lu2024mindbridge
   title: 'MindBridge: A Cross-Subject Brain Decoding Framework'
   year: 2024
@@ -196,6 +208,7 @@
   venue: 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: huo2024neuropictor
   title: 'NeuroPictor: Refining fMRI-to-Image Reconstruction via Multi-individual Pretraining and Multi-level Modulation'
   year: 2024
@@ -212,6 +225,7 @@
   resolved: true
   match_score: 1.0
   venue_short: ECCV 2024
+  added: '2026-08-20'
 - key: gong2024litemind
   title: 'Lite-Mind: Towards Efficient and Robust Brain Representation Learning'
   year: 2024
@@ -227,6 +241,7 @@
   venue: Proceedings of the 32nd ACM International Conference on Multimedia
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: xia2024umbrae
   title: 'UMBRAE: Unified Multimodal Brain Decoding'
   year: 2024
@@ -245,6 +260,7 @@
   resolved: true
   match_score: 1.0
   venue_short: ECCV 2024
+  added: '2026-08-20'
 - key: ferrante2023braincaptioning
   title: 'Brain Captioning: Decoding human brain activity into images and text'
   year: 2023
@@ -258,6 +274,7 @@
   paper: https://arxiv.org/abs/2305.11560v1
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: mindaligner2025
   title: 'MindAligner: Explicit Brain Functional Alignment for Cross-Subject Visual Decoding from Limited fMRI Data'
   year: 2025
@@ -272,6 +289,7 @@
   paper: https://arxiv.org/abs/2502.05034v1
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: liu2025glim
   title: Learning Interpretable Representations Leads to Semantically Faithful EEG-to-Text Generation
   year: 2025
@@ -284,6 +302,7 @@
   paper: https://arxiv.org/abs/2505.17099v1
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: wen2018video
   title: Neural Encoding and Decoding with Deep Learning for Dynamic Natural Vision
   year: 2018
@@ -297,6 +316,7 @@
   venue: Cerebral Cortex
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: chen2023mindvideo
   title: 'Cinematic Mindscapes: High-quality Video Reconstruction from Brain Activity'
   year: 2023
@@ -311,6 +331,7 @@
   venue: Advances in Neural Information Processing Systems 36
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: gong2024neuroclips
   title: 'NeuroClips: Towards High-fidelity and Smooth fMRI-to-Video Reconstruction'
   year: 2024
@@ -325,6 +346,7 @@
   venue: Advances in Neural Information Processing Systems 37
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: spampinato2017
   title: Deep Learning Human Mind for Automated Visual Classification
   year: 2017
@@ -342,6 +364,7 @@
   venue: 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: li2021perils
   title: The Perils and Pitfalls of Block Design for EEG Classification Experiments
   year: 2021
@@ -356,6 +379,7 @@
   venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: bai2023dreamdiffusion
   title: 'DreamDiffusion: Generating High-Quality Images from Brain EEG Signals'
   year: 2023
@@ -368,6 +392,7 @@
   paper: https://arxiv.org/abs/2306.16934v2
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: song2024nice
   title: Decoding Natural Images from EEG for Object Recognition
   year: 2024
@@ -381,6 +406,7 @@
   paper: https://arxiv.org/abs/2308.13234v3
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: li2024eegimagedecode
   title: Visual Decoding and Reconstruction via EEG Embeddings with Guided Diffusion
   year: 2024
@@ -398,6 +424,7 @@
   venue: Advances in Neural Information Processing Systems 37
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: benchetrit2024meg
   title: 'Brain decoding: toward real-time reconstruction of visual perception'
   year: 2024
@@ -412,6 +439,7 @@
   paper: https://arxiv.org/abs/2310.19812v3
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: gifford2022thingseeg2
   title: A large and rich EEG dataset for modeling human visual object recognition
   year: 2022
@@ -426,6 +454,7 @@
   resolved: true
   match_score: 1.0
   venue: 2022 Conference on Cognitive Computational Neuroscience
+  added: '2026-08-20'
 - key: huth2016semanticmaps
   title: Natural speech reveals the semantic maps that tile human cerebral cortex
   year: 2016
@@ -438,6 +467,7 @@
   venue: Nature
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: pereira2018
   title: Toward a universal decoder of linguistic meaning from brain activation
   year: 2018
@@ -452,6 +482,7 @@
   venue: Nature Communications
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: schrimpf2021
   title: 'The neural architecture of language: Integrative modeling converges on predictive processing'
   year: 2021
@@ -464,6 +495,7 @@
   resolved: true
   match_score: 1.0
   venue: Proceedings of the National Academy of Sciences
+  added: '2026-08-20'
 - key: caucheteux2022converge
   title: Brains and algorithms partially converge in natural language processing
   year: 2022
@@ -476,6 +508,7 @@
   venue: Communications Biology
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: tang2023semantic
   title: Semantic reconstruction of continuous language from non-invasive brain recordings
   year: 2023
@@ -491,6 +524,7 @@
   resolved: true
   match_score: 1.0
   venue: Nature Neuroscience
+  added: '2026-08-20'
 - key: antonello2023scaling
   title: Scaling laws for language encoding models in fMRI
   year: 2023
@@ -506,6 +540,7 @@
   venue: Advances in Neural Information Processing Systems 36
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: xia2024unibrain
   title: 'UniBrain: Unify Image Reconstruction and Captioning All in One Diffusion Model from Human Brain Activity'
   year: 2024
@@ -520,6 +555,7 @@
   paper: https://arxiv.org/abs/2308.07428v1
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: wang2022eeg2text
   title: Open Vocabulary Electroencephalography-To-Text Decoding and Zero-shot Sentiment Classification
   year: 2022
@@ -537,6 +573,7 @@
   venue: Proceedings of the AAAI Conference on Artificial Intelligence
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: duan2023dewave
   title: 'DeWave: Discrete Encoding of EEG Waves for EEG to Text Translation'
   year: 2023
@@ -553,6 +590,7 @@
   venue: Advances in Neural Information Processing Systems 36
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: jo2024areeegtext
   title: Are EEG-to-Text Models Working?
   year: 2024
@@ -567,6 +605,7 @@
   paper: https://doi.org/10.2139/ssrn.4882932
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: defossez2023speech
   title: Decoding speech perception from non-invasive brain recordings
   year: 2023
@@ -587,6 +626,7 @@
   venue: Nature Machine Intelligence
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: yang2023megtotext
   title: Semantic reconstruction of continuous language from MEG signals
   year: 2023
@@ -600,6 +640,7 @@
   venue: ICASSP 2024 - 2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: levy2025brain2qwerty
   title: 'Brain-to-Text Decoding: A Non-invasive Approach via Typing'
   year: 2025
@@ -613,6 +654,7 @@
   paper: https://arxiv.org/abs/2502.17480v1
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: zhou2024crosssubjectsplit
   title: Rethinking Cross-Subject Data Splitting for Brain-to-Text Decoding
   year: 2024
@@ -628,6 +670,7 @@
   venue: Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: mai2025aigcbrain
   title: 'Brain-Conditional Multimodal Synthesis: A Survey and Taxonomy'
   year: 2025
@@ -644,6 +687,7 @@
   venue: IEEE Transactions on Artificial Intelligence
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
 - key: xia2026basic
   title: Multigranular Evaluation for Brain Visual Decoding
   year: 2026
@@ -660,3 +704,4 @@
   venue: Proceedings of the AAAI Conference on Artificial Intelligence
   resolved: true
   match_score: 1.0
+  added: '2026-08-20'
