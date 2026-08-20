@@ -16,20 +16,46 @@ coverage:
     fMRI-language: {2019: 1, 2020: 4, 2021: 2, 2022: 7, 2023: 23, 2024: 34, 2025: 34, 2026: 25}
     note: 2026 counts are partial (through August) and already at or above full-year 2025.
 
+# Measured recall, 2026-08-20: the original exact-phrase queries recovered only 41% of a
+# 17-paper hand-curated control set. Splitting the phrases into term conjunctions (so that
+# "fMRI-to-Image" is caught by fMRI AND reconstruction), adding the q-bio.NC category query
+# and widening the window to 2023-06 raised that to 82% on a 658-paper pool.
 arxiv_queries:
-  - 'all:fMRI AND (all:"image reconstruction" OR all:"visual decoding" OR all:"visual reconstruction")'
-  - 'all:EEG AND (all:"visual decoding" OR all:"image reconstruction" OR all:"image decoding")'
-  - 'all:MEG AND all:decoding AND (all:speech OR all:language OR all:visual OR all:image)'
-  - 'all:"brain-to-text" OR all:"EEG-to-text" OR all:"MEG-to-text"'
-  - 'all:fMRI AND all:decoding AND (all:language OR all:semantic OR all:speech)'
-  - 'all:"brain decoding" AND (all:diffusion OR all:"vision language" OR all:LLM)'
+  - 'all:"brain decoding" OR all:"neural decoding" OR all:"brain-to-image" OR all:"brain-to-text" OR all:"mind reading"'
+  - 'all:fMRI AND (all:reconstruction OR all:decoding OR all:retrieval OR all:captioning OR all:generation)'
+  - 'all:EEG AND (all:decoding OR all:reconstruction OR all:retrieval) AND (all:visual OR all:image OR all:text OR all:language OR all:speech)'
+  - 'all:MEG AND (all:decoding OR all:reconstruction OR all:retrieval)'
+  - 'abs:"brain activity" AND (abs:reconstruction OR abs:decoding OR abs:generation OR abs:alignment)'
+  - 'all:"visual decoding" OR all:"visual reconstruction" OR all:"semantic reconstruction" OR all:"image reconstruction from"'
+  - 'cat:q-bio.NC AND (all:diffusion OR all:CLIP OR all:"vision-language" OR all:LLM OR all:contrastive)'
+  - 'all:"EEG-to-text" OR all:"EEG-to-image" OR all:"fMRI-to-image" OR all:"fMRI-to-text" OR all:"MEG-to-text"'
 
 # A candidate must match at least one of these in title or abstract. Keeps the sweep from
 # dragging in motor imagery, seizure detection and emotion recognition.
 must_match:
-  - '\b(fMRI|EEG|MEG|magnetoencephalograph|electroencephalograph|neuroimag)'
+  - '\b(fMRI|EEG|MEG|magnetoencephalograph|electroencephalograph|neuroimag|BOLD signal|brain activity|brain recording)'
 must_not_match:
-  - '\b(motor imagery|seizure|epilep|sleep stag|emotion recognition|driver drowsi)'
+  - '\b(motor imagery|seizure|epilep|sleep stag|emotion recognition|driver drowsi|schizophren|Alzheimer|depression detect)'
+
+# ---------------------------------------------------------------- coverage blind spots
+# Measured 2026-08-20 against the 45 hand-curated seed entries: 12 of them (27%) have no
+# arXiv version at all. An arXiv-only sweep therefore has a hard ceiling well below full
+# coverage, and what it misses is not random -- it is the neuroscience-journal half of the
+# field, which is where the dataset papers and the critique papers live (Tang et al. 2023
+# in Nature Neuroscience, Li et al. 2021 in TPAMI, Takagi & Nishimoto at CVPR).
+#
+# Three sources are needed, not one. Only the first is implemented:
+#   arxiv        CS/ML preprints                          -- implemented, 82% recall
+#   europe_pmc   neuroscience journals + bioRxiv          -- NOT implemented; a first probe
+#                returned 9975 hits but the query was too broad and pagination truncated,
+#                so its true recall is not yet known
+#   dblp/crossref  CS conference papers absent from arXiv -- NOT implemented; this is how
+#                DeWave (NeurIPS), Lite-Mind (ACM MM) and the TPAMI block-design paper are
+#                currently invisible to automation
+sources:
+  arxiv: implemented
+  europe_pmc: planned
+  dblp: planned
 
 # ---------------------------------------------------------------- change highlighting
 # Entries whose `added:` date is newer than the most recent release below are rendered as
